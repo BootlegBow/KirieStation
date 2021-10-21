@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/goose/terry
 	name = "Terry"
-	desc = "Security's loyal... Duck? Something seems off about this duck. The words FATAL FURY is sewn into his hat."
+	desc = "Security's loyal... Duck? Something seems off about this duck. The words FATAL FURY is sewn into his hat." //never forget r.i.p mcgriff
 	icon = 'goon/icons/mob/misc/birdterry.dmi'
 	icon_state = "terry"
 	icon_living = "terry"

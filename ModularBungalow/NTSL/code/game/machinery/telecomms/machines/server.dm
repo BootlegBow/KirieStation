@@ -57,7 +57,7 @@
 		if(!compileerrors.len && (compiledcode != rawcode))
 			user.log_message(rawcode, LOG_NTSL)
 			compiledcode = rawcode
-		if(user.mind.assigned_role == "Signal Technician") //achievement description says only Signal Technician gets the achivement
+		if(user.mind.assigned_role == "Secretary") //fuck off mr. engineer with tcomms admin access, tell your ce to stop doing the hop's job
 			var/freq
 			if(freq_listening.len > 0)
 				freq = freq_listening[1]

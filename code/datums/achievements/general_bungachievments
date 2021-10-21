@@ -1,0 +1,3 @@
+/datum/award/achievement/general
+	category = "General"
+	icon = "general"
