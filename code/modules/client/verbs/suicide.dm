@@ -77,6 +77,8 @@
 				death(FALSE)
 				ghostize(FALSE)	// Disallows reentering body and disassociates mind
 
+				src.client.give_award(/datum/award/achievement/general/suicide, src)//There's an achievement for this!
+
 				return
 
 		var/suicide_message

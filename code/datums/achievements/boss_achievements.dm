@@ -15,13 +15,13 @@
 	icon = "firstboss"
 
 /datum/award/achievement/boss/blood_miner_kill
-	name = "Drank Himself To Death"
+	name = "Drank Himself to Death"
 	desc = "I guess he couldn't handle his drink that well."
 	database_id = BOSS_MEDAL_MINER
 	icon = "miner"
 
 /datum/award/achievement/boss/demonic_miner_kill
-	name = "Chilled To The Bone"
+	name = "Chilled to the Bone"
 	desc = "Definitely harder than the Blood-Drunk Miner."
 	database_id = BOSS_MEDAL_FROSTMINER
 
@@ -32,7 +32,7 @@
 	icon = "bbgum"
 
 /datum/award/achievement/boss/colossus_kill
-	name = "Colossus Killer"
+	name = "Colossal Fight"
 	desc = "The bigger they are... the better the loot"
 	database_id = BOSS_MEDAL_COLOSSUS
 	icon = "colossus"
