@@ -337,9 +337,6 @@
 /obj/machinery/camera{
 	c_tag = "Bridge East"
 	},
-/obj/structure/noticeboard{
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -347,6 +344,9 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/vending/command{
+	pixel_y = 30
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aaU" = (
@@ -955,7 +955,6 @@
 /obj/structure/chair/comfy/black{
 	dir = 4
 	},
-/obj/effect/landmark/start/head_of_personnel,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "acq" = (
@@ -1097,7 +1096,6 @@
 	pixel_x = -26
 	},
 /obj/structure/cable,
-/obj/effect/landmark/start/quartermaster,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "acF" = (
@@ -1308,6 +1306,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/effect/landmark/start/captain,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
 "ade" = (
@@ -2343,6 +2342,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "afe" = (
@@ -2690,11 +2690,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/space,
 /area/space/nearstation)
-"afU" = (
-/obj/structure/chair/comfy/black,
-/obj/effect/landmark/start/chief_engineer,
-/turf/open/floor/carpet,
-/area/bridge/meeting_room)
 "afV" = (
 /obj/machinery/computer/communications,
 /turf/open/floor/carpet,
@@ -3346,6 +3341,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
+/obj/effect/landmark/start/quartermaster,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "ahx" = (
@@ -4350,6 +4346,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/obj/effect/landmark/start/head_of_personnel,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/hop)
 "ajA" = (
@@ -4509,8 +4506,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/bot,
-/obj/item/radio/off,
-/obj/item/radio/off,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -4522,6 +4517,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
+	},
+/obj/item/inspector{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/inspector{
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -4723,7 +4726,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/retaliate/terry,
 /turf/open/floor/plasteel,
 /area/security/brig)
 "akl" = (
@@ -4870,6 +4872,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/mob/living/simple_animal/pet/dog/pug/mcgriff,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "akw" = (
@@ -6093,6 +6096,7 @@
 	pixel_y = 12
 	},
 /obj/item/retractor,
+/obj/item/surgical_drapes,
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "ane" = (
@@ -8720,6 +8724,7 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
+/obj/effect/landmark/start/research_director,
 /turf/open/floor/carpet/purple,
 /area/crew_quarters/heads/hor)
 "asy" = (
@@ -10716,6 +10721,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/effect/landmark/start/chief_engineer,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "awy" = (
@@ -11091,7 +11097,6 @@
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
-/obj/effect/landmark/start/research_director,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "axg" = (
@@ -11729,6 +11734,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/effect/landmark/start/chief_medical_officer,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "ayA" = (
@@ -15501,7 +15507,6 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/nuke_storage)
 "aIm" = (
-/obj/effect/landmark/start/chief_medical_officer,
 /obj/structure/chair/comfy/black,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
@@ -16029,6 +16034,7 @@
 /area/crew_quarters/kitchen)
 "aNc" = (
 /obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
 "aNf" = (
@@ -16728,6 +16734,7 @@
 /obj/structure/chair/comfy/black{
 	dir = 1
 	},
+/obj/effect/landmark/start/captain,
 /turf/open/floor/carpet,
 /area/bridge)
 "aSn" = (
@@ -17345,6 +17352,7 @@
 /obj/structure/fireplace,
 /obj/structure/bed,
 /obj/item/bedsheet/captain,
+/obj/effect/landmark/start/captain,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain)
 "aWY" = (
@@ -19048,13 +19056,13 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/structure/bookcase/random/reference,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/machinery/vending/psych,
 /turf/open/floor/plasteel/white,
 /area/medical/psychology)
 "cqV" = (
@@ -20370,6 +20378,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "eeE" = (
@@ -26543,7 +26552,6 @@
 /obj/structure/chair/comfy/black{
 	dir = 8
 	},
-/obj/effect/landmark/start/warden,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "lon" = (
@@ -26576,9 +26584,6 @@
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/plating,
 /area/maintenance/aft)
-"loX" = (
-/turf/closed/wall/r_wall,
-/area/maintenance/port/fore)
 "lpZ" = (
 /obj/effect/landmark/xeno_spawn,
 /obj/machinery/space_heater,
@@ -27206,6 +27211,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
+/obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
 "lYO" = (
@@ -27477,9 +27483,6 @@
 "mpo" = (
 /turf/closed/wall/r_wall,
 /area/science/genetics)
-"mpK" = (
-/turf/closed/wall/r_wall,
-/area/commons/cryopods)
 "mpN" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -27818,7 +27821,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "mMT" = (
-/mob/living/simple_animal/hostile/retaliate/terry,
 /obj/structure/table/reinforced,
 /obj/machinery/light{
 	dir = 4
@@ -34008,7 +34010,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
-/obj/effect/landmark/start/head_of_security,
 /turf/open/floor/carpet,
 /area/bridge/meeting_room)
 "ubC" = (
@@ -61447,7 +61448,7 @@ bcU
 bcU
 wGH
 bcU
-mpK
+bcU
 aAC
 aeo
 aeo
@@ -61704,7 +61705,7 @@ wGH
 kSt
 dyp
 rPs
-mpK
+bcU
 aAD
 pWH
 ahk
@@ -61961,7 +61962,7 @@ wGH
 rVx
 dyp
 rVx
-mpK
+bcU
 aCw
 hYU
 hFF
@@ -62218,7 +62219,7 @@ wGH
 rVx
 fAN
 hpI
-mpK
+bcU
 wgM
 viU
 dJr
@@ -62475,7 +62476,7 @@ qpi
 iOo
 bkv
 taD
-mpK
+bcU
 ajy
 uWg
 uWg
@@ -62728,11 +62729,11 @@ lZy
 naN
 axu
 anW
-mpK
-mpK
+bcU
+bcU
 xHJ
-mpK
-mpK
+bcU
+bcU
 uWg
 uWg
 wdv
@@ -68594,7 +68595,7 @@ nnG
 mdf
 abE
 aHY
-afU
+aIm
 aHE
 aVP
 axf
@@ -73738,7 +73739,7 @@ acg
 act
 aUw
 eFr
-loX
+aUw
 aaS
 aaS
 aaS
@@ -73995,18 +73996,18 @@ afP
 aiV
 aUw
 aUw
-loX
-loX
+aUw
+aUw
 sKl
 sKl
 afM
-loX
-loX
-loX
-loX
-loX
-loX
-loX
+aUw
+aUw
+aUw
+aUw
+aUw
+aUw
+aUw
 aPD
 aqc
 aNc
