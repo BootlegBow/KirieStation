@@ -26,8 +26,8 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/grille/LateInitialize()
-	if(prob(10))
-		deconstruct(FALSE)
+	if(prob(50))
+		obj_break()
 
 /obj/structure/grille/Destroy()
 	update_cable_icons_on_turf(get_turf(src))

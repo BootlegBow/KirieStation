@@ -363,11 +363,11 @@
 	switch(fitting)
 		if("tube")
 			brightness = 8
-			if(prob(2))
+			if(prob(50))
 				break_light_tube(1)
 		if("bulb")
 			brightness = 4
-			if(prob(5))
+			if(prob(70))
 				break_light_tube(1)
 	addtimer(CALLBACK(src, .proc/update, 0), 1)
 
