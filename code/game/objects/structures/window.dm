@@ -77,14 +77,14 @@
 		var/area/turf_area = get_area(turf_in_range)
 		//Check for dangerous pressure differences
 		if(turf_in_range.return_turf_delta_p() > DANGEROUS_DELTA_P)
-			continue
+			return FALSE
 		//Check if breaking this door will expose the station to space
-		if(isspaceturf(turf_in_range) || istype(turf_area, /area/space))
-			continue
+		if(isspaceturf(turf_in_range) || istype(turf_area, /area/space) || istype(turf_area, /area/engine/atmos) || istype(turf_area, /area/engine/supermatter))
+			return FALSE
 		else
 			if(prob(20))
 				take_damage(10)
-			else if(prob(20))
+			else if(prob(40))
 				take_damage(20)
 			else if(prob(10))
 				deconstruct(FALSE)

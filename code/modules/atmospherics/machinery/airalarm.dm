@@ -238,6 +238,11 @@
 /obj/machinery/airalarm/Initialize(mapload)
 	. = ..()
 	set_frequency(frequency)
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/airalarm/LateInitialize()
+	if(prob(10))
+
 
 /obj/machinery/airalarm/examine(mob/user)
 	. = ..()
