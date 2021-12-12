@@ -21,6 +21,14 @@
 	. = ..()
 	AddElement(/datum/element/atmos_sensitive)
 
+/obj/structure/grille/Initialize()
+	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/grille/LateInitialize()
+	if(prob(10))
+		deconstruct(FALSE)
+
 /obj/structure/grille/Destroy()
 	update_cable_icons_on_turf(get_turf(src))
 	return ..()

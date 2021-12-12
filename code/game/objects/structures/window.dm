@@ -68,6 +68,28 @@
 	flags_1 |= ALLOW_DARK_PAINTS_1
 	RegisterSignal(src, COMSIG_OBJ_PAINTED, .proc/on_painted)
 
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/window/LateInitialize() //Yes, I did just do it again.
+	if(src == /obj/structure/window)
+	var/isonshuttle = istype(get_area(src), /area/shuttle)
+	for(var/turf/turf_in_range in range(1, src))
+		var/area/turf_area = get_area(turf_in_range)
+		//Check for dangerous pressure differences
+		if(turf_in_range.return_turf_delta_p() > DANGEROUS_DELTA_P)
+			continue
+		//Check if breaking this door will expose the station to space/planetary atmos
+		else if(turf_in_range.is_nearby_planetary_atmos() || isspaceturf(turf_in_range) || (!isonshuttle && (istype(turf_area, /area/shuttle) || istype(turf_area, /area/space))) || (isonshuttle && !istype(turf_area, /area/shuttle)))
+			continue
+		else
+			if(prob(40))
+				take_damage(10)
+			else if(prob(40))
+				take_damage(20)
+			else
+				deconstruct(FALSE)
+//Cry about it
+
 /obj/structure/window/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS ,null,CALLBACK(src, .proc/can_be_rotated),CALLBACK(src,.proc/after_rotation))
