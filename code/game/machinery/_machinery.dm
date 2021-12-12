@@ -167,7 +167,7 @@
 	. = ..()
 	power_change()
 	RegisterSignal(src, COMSIG_ENTER_AREA, .proc/power_change)
-	prob(1)
+	if(prob(1))
 		deconstruct(FALSE)
 
 /obj/machinery/Destroy()

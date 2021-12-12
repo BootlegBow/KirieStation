@@ -22,7 +22,7 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/computer/LateInitialize()
-	prob(10)
+	if(prob(10))
 		deconstruct(FALSE)
 
 /obj/machinery/computer/Destroy()

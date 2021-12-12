@@ -1,4 +1,5 @@
 #define MAX_DENT_DECALS 15
+#define DANGEROUS_DELTA_P 250//lmao fuck you 2: electorc lamoenoo
 
 /turf/closed/wall
 	name = "wall"
@@ -49,17 +50,17 @@
 
 /turf/closed/wall/LateInitialize() //What do you mean I can't just copy-paste swarmer code?
 	if(src == /turf/closed/wall)//this works right? i think this works
-	var/isonshuttle = istype(get_area(src), /area/shuttle)
-	for(var/turf/turf_in_range in range(1, src))
-		var/area/turf_area = get_area(turf_in_range)
-		//Check for dangerous pressure differences
-		if (turf_in_range.return_turf_delta_p() > DANGEROUS_DELTA_P)
-			continue
-		//Check if breaking this door will expose the station to space/planetary atmos
-		else if(turf_in_range.is_nearby_planetary_atmos() || isspaceturf(turf_in_range) || (!isonshuttle && (istype(turf_area, /area/shuttle) || istype(turf_area, /area/space))) || (isonshuttle && !istype(turf_area, /area/shuttle)))
-			continue
-		else
-			qdel(src)
+		var/isonshuttle = istype(get_area(src), /area/shuttle)
+		for(var/turf/turf_in_range in range(1, src))
+			var/area/turf_area = get_area(turf_in_range)
+			//Check for dangerous pressure differences
+			if (turf_in_range.return_turf_delta_p() > DANGEROUS_DELTA_P)
+				continue
+			//Check if breaking this door will expose the station to space/planetary atmos
+			else if(turf_in_range.is_nearby_planetary_atmos() || isspaceturf(turf_in_range) || (!isonshuttle && (istype(turf_area, /area/shuttle) || istype(turf_area, /area/space))) || (isonshuttle && !istype(turf_area, /area/shuttle)))
+				continue
+			else
+				qdel(src)
 
 /turf/closed/wall/Destroy()
 	if(is_station_level(z))
