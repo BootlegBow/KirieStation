@@ -1,4 +1,4 @@
-/obj/structure/closet
+/obj/structure/closet //shouldnt they be called lockers? i thought they were called lockers
 	name = "closet"
 	desc = "It's a basic storage unit."
 	icon = 'icons/obj/closet.dmi'
@@ -39,6 +39,7 @@
 	var/icon_welded = "welded"
 	/// Whether a skittish person can dive inside this closet. Disable if opening the closet causes "bad things" to happen or that it leads to a logical inconsistency.
 	var/divable = TRUE
+	var/has_panel = FALSE //Whether this particular locker has wires and an access panel. I did it this way so you can override it and give non-secure lockers panels (if you wanted to for whatever reason) also because im lazy
 
 
 /obj/structure/closet/Initialize(mapload)
@@ -88,6 +89,8 @@
 				. += "locked"
 			else
 				. += "unlocked"
+		if(has_panel && panel_open)
+			. += "panel_open"
 	else
 		if(icon_door_override)
 			. += "[icon_door]_open"
@@ -102,6 +105,8 @@
 		. += "<span class='notice'>It is <b>bolted</b> to the ground.</span>"
 	if(opened)
 		. += "<span class='notice'>The parts are <b>welded</b> together.</span>"
+	if(has_panel)
+		. += "<span class='notice'>The access panel is [panel_open ? "open" : "closed"].</span>"
 	else if(secure && !opened)
 		. += "<span class='notice'>Alt-click to [locked ? "unlock" : "lock"].</span>"
 
@@ -253,6 +258,14 @@
 		return
 	if(src.tool_interact(W,user))
 		return 1 // No afterattack
+	if(W.tool_behaviour == TOOL_SCREWDRIVER) //no i didnt copy-paste airlock code
+		panel_open = !panel_open
+		to_chat(user, "<span class='notice'>You [panel_open ? "open":"close"] the maintenance panel of the closet.</span>")
+		C.play_tool_sound(src)
+		update_icon()
+	if(has_panel && panel_open && is_wire_tool(W)) //yes im competent
+		wires.interact(user)
+		return TRUE //because otherwise youd hit the closet with the wirecutters i think                thats how it works right?
 	else
 		return ..()
 
